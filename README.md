@@ -50,10 +50,10 @@ are:
 
 ### Customizable UI
 
-Click on any visible element on the page tio view the settings which will allow you to customize
+Click on any visible element on the page to view the settings which will allow you to customize
 that element, and view all other settings of the app as well. If you want to have a dedicated
 browser source just for managing settings, you can add `/settings.html` at the end of the browser
-source.
+source URL.
 
 You can use the _Elements_ section of the settings to hide certain elements of the overlay that are
 specific to me (the developer). Unchecking things there will completely remove the element and
