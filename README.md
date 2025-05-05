@@ -10,26 +10,13 @@ An overlay created by [WentTheFox] for the [BSDataPuller] and [BeatSaberPlus] mo
 
 ## Features
 
-> [!IMPORTANT]
-> Some customization options refer to "query parameters" which is a technical term for values in a
-> URL that are denoted by a starting `?` character and a `&` between individual values. If you want
-> to provide multiple options at once, be sure to use the format `?param1=value1&param2=value2&…`
->
-> "Deprecated" means the functionality might still work bit it is not actively maintained, and it is
-> subject for removal in the future. You should avoid using it, and if you are currently using it,
-> switch to the suggested alternatives.
-
 ### Live Map Data
 
-The overlay works with either of the two mods. In order to use a specific one as the data source,
-add the `source` query parameter with the data source's code as the value. Available codes:
+The overlay works with either of the two mods. In order to use a specific one as the data source:
 
-* `BSDP` - BSDataPuller (default, supports all features)
-* `BSPlus` - BeatSaberPlus (unreliable BSR IDs, no ranked stars)
-* `MOCK` - Virtual source which uses pre-defined events (for testing)
-* `OFF` - **Deprecated**, please use `disabled=beat-saber-root`, see the [Customizable UI] section
-
-[Customizable UI]: #customizable-ui
+* BSDataPuller (default, supports all features)
+* BeatSaberPlus (unreliable BSR IDs, no ranked stars)
+* Virtual source which uses pre-defined events (for testing)
 
 While playing, the current song will appear in the top-right corner along with some supplemental
 information like difficulty, length, ranked stars and PP. Additionally, an accuracy graph and the
