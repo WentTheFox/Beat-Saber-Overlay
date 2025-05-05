@@ -1,8 +1,8 @@
-# DJDavid98's Beat Saber Overlay
+# WentTheFox's Beat Saber Overlay
 
-An overlay created by [DJDavid98] for the [BSDataPuller] and [BeatSaberPlus] mods.
+An overlay created by [WentTheFox] for the [BSDataPuller] and [BeatSaberPlus] mods.
 
-[DJDavid98]: https://djdavid98.art
+[WentTheFox]: https://went.tf
 
 [BSDataPuller]: https://github.com/ReadieFur/BSDataPuller/
 
@@ -92,7 +92,7 @@ should be striving to lift each other up, and I very much feel like it's mutuall
 credit your fellow creators and developers who make what you do possible, and I myself try to live
 by that as well.
 
-[DoubleColonBot]: https://github.com/DJDavid98/DoubleColonBot
+[DoubleColonBot]: https://github.com/WentTheFox/DoubleColonBot
 
 ## Attributions
 

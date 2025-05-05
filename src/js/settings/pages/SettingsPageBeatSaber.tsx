@@ -96,7 +96,7 @@ export const SettingsPageBeatSaber: FC = () => {
                 ref={firstInputRef}
             >
                 <p>Displays song information via
-                    the <ExternalLink href="https://github.com/DJDavid98/BSDataPuller/">DataPuller</ExternalLink> mod,
+                    the <ExternalLink href="https://github.com/WentTheFox/BSDataPuller/">DataPuller</ExternalLink> mod,
                     it is the most complete and original source used for the overlay.</p>
             </LabelledInput>
             <LabelledInput

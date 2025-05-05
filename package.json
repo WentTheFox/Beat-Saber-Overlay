@@ -1,7 +1,7 @@
 {
-  "name": "@djdavid98/beat-saber-overlay",
+  "name": "@wentthefox/beat-saber-overlay",
   "version": "1.0.0",
-  "description": "DJDavid98's overlay for Beat Saber streaming",
+  "description": "WentTheFox's overlay for Beat Saber streaming",
   "scripts": {
     "lint:eslint": "eslint \"src/**/*.{ts,tsx}\" --max-warnings=0",
     "lint:tsc": "tsc --noEmit",
@@ -13,7 +13,7 @@
     "prepare": "husky install"
   },
   "keywords": [],
-  "author": "DJDavid98 <https://djdavid98.art>",
+  "author": "WentTheFox <https://went.tf>",
   "license": "MIT",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.8.3",

@@ -137,7 +137,7 @@ export const SettingsPageChatOverlay: FC = () => {
             </summary>
             <h3>Server URL</h3>
             <p>Enter the full URL of the <ExternalLink
-                href="https://github.com/DJDavid98/DoubleColonBot"
+                href="https://github.com/WentTheFox/DoubleColonBot"
             >DoubleColonBot</ExternalLink> server, including the port number</p>
             <input
                 type="url"
