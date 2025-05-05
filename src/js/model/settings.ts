@@ -23,6 +23,7 @@ export enum SettingName {
     OBS_FAREWELL_SCENE = 'obsFarewellScene',
     OUTRO_SONG_BSR = 'outro-song-bsr',
     CHAT_SONG_PREVIEWS = 'chat-song-previews',
+    CHANNEL_BUG_URL = 'channelBugUrl',
 }
 
 export interface SettingTypes {
@@ -45,6 +46,7 @@ export interface SettingTypes {
     [SettingName.OUTRO_SONG_BSR]: string;
     [SettingName.CHAT_SONG_PREVIEWS]: boolean;
     [SettingName.TTS_PROVIDER]: TtsProvider;
+    [SettingName.CHANNEL_BUG_URL]: string;
 }
 
 export type SettingsObject = {

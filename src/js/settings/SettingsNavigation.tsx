@@ -10,6 +10,7 @@ import { SettingsPageChatOverlay } from './pages/SettingsPageChatOverlay';
 import { SettingsPageImportExport } from './pages/SettingsPageImportExport';
 import { SettingsPageObsIntegration } from './pages/SettingsPageObsIntegration';
 import { SettingsPageCredits } from './pages/SettingsPageCredits';
+import { SettingsPageChannelBug } from './pages/SettingsPageChannelBug';
 
 // TODO More sophisticated iconography
 export const settingPages: Record<SettingsPage, SettingsPageOptions> = {
@@ -31,6 +32,7 @@ export const settingPages: Record<SettingsPage, SettingsPageOptions> = {
     [SettingsPage.CHANNEL_BUG]: {
         name: 'Channel Bug',
         icon: '🐞',
+        component: SettingsPageChannelBug,
     },
     [SettingsPage.CHAT_OVERLAY]: {
         name: 'Chat Overlay',

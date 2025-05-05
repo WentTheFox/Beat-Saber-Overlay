@@ -1,0 +1,20 @@
+@use "../mixins";
+@use "../variables";
+
+.preview-wrap {
+  margin-right: auto;
+}
+
+.preview-image {
+  display: block;
+  color: #aaa;
+  border: .0625em solid;
+  width: variables.$logo-image-width;
+  text-align: center;
+
+  @include mixins.checker-background;
+
+  &.error {
+    color: #faa;
+  }
+}

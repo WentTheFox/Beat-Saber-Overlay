@@ -63,50 +63,34 @@ are:
 
 ### Customizable UI
 
-Customizable may be a stretch, but basically, if there's an element on the overlay that you do not
-want to see from the list below, you can use the `disable` query parameter, and provide a list of
-comma-separated values to hide those elements and save the processing power needed to render them.
+Click on any visible element on the page tio view the settings which will allow you to customize
+that element, and view all other settings of the app as well. If you want to have a dedicated
+browser source just for managing settings, you can add `/settings.html` at the end of the browser
+source.
 
-Nesting means an element is part of another, so if you hide the element higher on the list, it will
-cause ones below it to also not render.
+You can use the _Elements_ section of the settings to hide certain elements of the overlay that are
+specific to me (the developer). Unchecking things there will completely remove the element and
+prevent all code associated with it from running to limit resource usage.
 
-* `background-root` - the checkered background (automatically hidden inside OBS Browser Sources)
-* `beat-saber-root` - wraps all components related to Beat Saber
-    * `connection-root` - displays connection status with the chosen Beat Saber live data source
-    * `beat-saber-additional-data-root` - additional data about the currently playing map
-        * `beat-saber-accuracy-graph-root` - combined accuracy, energy, and miss graph
-        * `beat-saber-modifiers-root` - list of currently active modifiers
-* `chat-root` - chat overlay integrated with [DoubleColonBot]
-* `heart-rate-root` - displays the components related to heart rate tracking
-    * `bouncy-root` - my personal bouncy animation videos that changes speed depending on heart rate
-* `credits-root` - my personal logo linking to my website & a local clock, swapping on a timer
+And yes, this includes the "watermark" (channel bug) in the top left. You can choose to hide it
+completely, or you can set your own logo image.
 
-If you are not me, you most likely want to use at least this to remove elements specific to me:
+#### Crediting
 
-```
-credits-root,bouncy-root,chat-root
-```
+If you end up using this overlay in your own streams, all I would ask you to consider is to
+include a note about where you got this overlay from, both to let others find it too and also out
+of courtesy for my work on this entirely custom overlay page.
 
-You can also remove these elements via custom CSS, but this parameter is not simply hiding the
-elements visually, it's also not doing any of the data processing associated with them. For example,
-if you hide `heart-rate-root`, that effectively disables all code in the overlay related to getting
-and displaying heart rate data, saving you some CPU resources.
+If you are wondering what links to use, you can link to
 
-> [!NOTE]
-> Regarding `credits-root`, you are more than welcome to remove it to avoid confusing your viewers
-> with my logo. If you end up using it in your own streams, all I would ask you to consider is to
-> include a note about where you got this overlay from, both to let others find it too and also out
-> of courtesy for my work on this entirely custom overlay page.
->
-> If you are wondering what links to use, you can link to
-> * my Twitch channel: https://www.twitch.tv/djdavid98
-> * the GitHub page of this overlay: https://github.com/DJDavid98/Beat-Saber-Overlay
-> * my website: https://djdavid98.art
->
-> Crediting is not mandatory, I will not go after you if you don't do it, but as a community we
-> should be striving to lift each other up, and I very much feel like it's mutually beneficial to
-> credit your fellow creators and developers who make what you do possible, and I myself try to live
-> by that as well.
+* my Twitch channel: https://www.twitch.tv/wentthefox
+* the GitHub page of this overlay: https://github.com/WentTheFox/Beat-Saber-Overlay
+* my website: https://went.tf
+
+Crediting is not mandatory, I will not go after you if you don't do it, but as a community we
+should be striving to lift each other up, and I very much feel like it's mutually beneficial to
+credit your fellow creators and developers who make what you do possible, and I myself try to live
+by that as well.
 
 [DoubleColonBot]: https://github.com/DJDavid98/DoubleColonBot
 

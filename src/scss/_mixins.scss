@@ -82,3 +82,8 @@
     border-color: variables.$dialog-input-border-focus;
   }
 }
+
+@mixin checker-background($path: '../../') {
+  background: #000 url('#{$path}img/transparency.svg') repeat;
+  background-size: 32px;
+}

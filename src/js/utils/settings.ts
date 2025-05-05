@@ -117,7 +117,13 @@ export const settingValidators: { [k in SettingName]: (input: unknown) => Settin
             return input;
         }
         return null;
-    }
+    },
+    [SettingName.CHANNEL_BUG_URL]: input => {
+        if (typeof input === 'string' && /^https?:\/\/[^/]+\/.*$/.test(input)) {
+            return input;
+        }
+        return null;
+    },
 };
 
 export const isSettingName = (value: string): value is SettingName => value in settingValidators;
@@ -139,7 +145,14 @@ export const isValidSettings = (input: unknown): input is SettingsObject => {
 
     return true;
 };
-export const defaultSettings = settingNames.reduce((acc, settingName) => ({
-    ...acc,
-    [settingName]: null
-}), {} as Record<keyof SettingsObject, null>);
+
+const defaultSettingsMap: Partial<{ [k in SettingName]: SettingTypes[k] }> = {
+    [SettingName.CHANNEL_BUG_URL]: 'https://went.tf/logos/wentthefox.svg',
+};
+
+export const defaultSettings = settingNames.reduce((acc, settingName) => {
+    return ({
+        ...acc,
+        [settingName]: defaultSettingsMap?.[settingName] ?? null
+    });
+}, {} as SettingsObject);

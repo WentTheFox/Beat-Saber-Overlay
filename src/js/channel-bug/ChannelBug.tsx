@@ -3,7 +3,7 @@ import { ChannelBugClock } from './ChannelBugClock';
 import { useSocket } from '../utils/socket-context';
 import { EventAlert } from '../EventAlert';
 import { useSettings } from '../contexts/settings-context';
-import { SettingsPage } from '../model/settings';
+import { SettingName, SettingsPage } from '../model/settings';
 import * as styles from '../../scss/modules/ChannelBug.module.scss';
 
 enum ChannelBugScene {
@@ -34,7 +34,10 @@ const forceSceneSwitchDefault = (): void => {
  * @see https://en.wikipedia.org/wiki/Digital_on-screen_graphic
  */
 export const ChannelBug: FC = () => {
-    const { openSettings } = useSettings();
+    const {
+        openSettings,
+        settings: { [SettingName.CHANNEL_BUG_URL]: channelBugUrl }
+    } = useSettings();
     const creditsRef = useRef<HTMLDivElement>(null);
     const sceneQueue = useRef<Array<ChannelBugScene>>(initialSceneQueue);
     const forceSceneSwitch = useRef<(to: ChannelBugScene | typeof FORCE_NEXT_SCENE) => void>(forceSceneSwitchDefault);
@@ -122,11 +125,11 @@ export const ChannelBug: FC = () => {
             case ChannelBugScene.LINKS:
                 return (
                     <div id={ChannelBugScene.LINKS} hidden={scene !== ChannelBugScene.LINKS}>
-                        <img
+                        {channelBugUrl ? <img
                             className={styles['logo-image']}
-                            src="https://djdavid98.art/logos/djdavid98.svg"
-                            alt="DJDavid98"
-                        />
+                            src={channelBugUrl}
+                            alt="channel bug"
+                        /> : <button onClick={openChannelBugSettings}>Channel Bug Settings</button>}
                     </div>
                 );
             case ChannelBugScene.TIME:
@@ -152,7 +155,7 @@ export const ChannelBug: FC = () => {
                     </div>
                 );
         }
-    }, [scene]);
+    }, [channelBugUrl, openChannelBugSettings, scene]);
 
     return (
         <div className={styles['channel-bug']} ref={creditsRef} onClick={openChannelBugSettings}>

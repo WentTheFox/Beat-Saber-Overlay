@@ -50,7 +50,7 @@
     "react-fast-marquee": "^1.6.0",
     "react-lottie-player": "^1.5.4",
     "react-use-websocket": "^4.3.1",
-    "sass": "^1.57.1",
+    "sass": "^1.87.0",
     "swr": "^2.2.4",
     "timers-browserify": "^2.0.12",
     "tmi.js": "^1.8.5",
