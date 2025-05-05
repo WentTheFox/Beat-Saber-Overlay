@@ -1,6 +1,7 @@
 // Keep in sync with README.md "Customizable UI" section
 export enum RemovableElementId {
     APP = 'app',
+    MIGRATION_WARNING = 'migration-warning-root',
     BACKGROUND = 'background-root',
     BEAT_SABER_ACCURACY_GRAPH = 'beat-saber-accuracy-graph-root',
     BEAT_SABER_ADDITIONAL_DATA = 'beat-saber-additional-data-root',
@@ -32,6 +33,7 @@ export const elementsTree: RemovableElementsTree = {
     [RemovableElementId.APP]: {
         name: 'Technical Root Node',
         children: [
+            RemovableElementId.MIGRATION_WARNING,
             RemovableElementId.BACKGROUND,
             RemovableElementId.BEAT_SABER,
             RemovableElementId.CHAT,
@@ -39,6 +41,10 @@ export const elementsTree: RemovableElementsTree = {
             RemovableElementId.CHANNEL_BUG,
         ],
         disabled: true,
+    },
+    [RemovableElementId.MIGRATION_WARNING]: {
+        name: 'Migration Warning',
+        description: 'Hides the warning about migrating to the new domain or risk losing your settings',
     },
     [RemovableElementId.BACKGROUND]: {
         name: 'Background',

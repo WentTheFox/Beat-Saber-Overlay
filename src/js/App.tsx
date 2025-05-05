@@ -8,9 +8,11 @@ import { RemovableElementId } from './model/removable-element-id';
 import { RemovableElement } from './RemovableElement';
 import { AppBackground } from './AppBackground';
 import { ChatWrapper } from './chat/ChatWrapper';
+import { MigrationWarningWrapper } from './migration-warning/MigrationWarningWrapper';
 
 export const App: FunctionComponent = () => {
     return <RemovableElement id={RemovableElementId.APP}>
+        <MigrationWarningWrapper />
         <SocketProvider>
             <SmartRemountWrapper rootId={RemovableElementId.BEAT_SABER} delayRemount={500}>
                 <BeatSaber />

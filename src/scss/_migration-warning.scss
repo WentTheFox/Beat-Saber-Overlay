@@ -1,0 +1,28 @@
+#migration-warning-root {
+  position: fixed;
+  background-color: #fee;
+  color: #800;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 2em;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  user-select: text;
+
+  a {
+    font-weight: bold;
+  }
+
+  button {
+    background-color: transparent;
+    border: .2em solid;
+    padding: .5em;
+    color: #080;
+    font-size: 1em;
+    border-radius: .25em;
+  }
+}
