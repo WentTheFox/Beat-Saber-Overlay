@@ -37,7 +37,7 @@ export const SettingsPageCredits: FC = () => {
                 <ExternalLink href="https://www.twitch.tv/theblackparrot">TheBlackParrot</ExternalLink>
             </li>
             <li>
-                <ExternalLink href="https://www.twitch.tv/minniefoxx">MinnieFoxx</ExternalLink>
+                <ExternalLink href="https://www.twitch.tv/minniefops">MinnieFops</ExternalLink>
             </li>
         </ul>
 
